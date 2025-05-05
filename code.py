@@ -24,3 +24,9 @@ def prdict(text= '!! @abc hi hello how are you'):
     out = model.predict(vector_inp)
 
     return out
+
+import pickle
+count_vectorizer = joblib.load('model.pkl')
+pickle.dump(count_vectorizer, open('model.sav', 'wb'))
+
+# model = joblib.load('model.pkl')

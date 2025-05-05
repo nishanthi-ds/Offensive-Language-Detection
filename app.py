@@ -1,7 +1,7 @@
 import streamlit as st
-import joblib
 import pandas as pd
-import re
+import pickle,re
+import numpy as np
 
 # -------- Prediction Function --------
 def predict(text):
@@ -18,11 +18,11 @@ def predict(text):
     df['text'] = df['text'].apply(clean_tweet)
 
     # Load vectorizer and transform text
-    count_vectorizer = joblib.load('countvector.pkl')  # Must be CountVectorizer object
+    count_vectorizer = pickle.load(open('countvector.sav', 'rb'))  # Must be CountVectorizer object
     vector_inp = count_vectorizer.transform(df['text'])
 
     # Load model and predict
-    model = joblib.load('model.pkl')
+    model = pickle.load(open('model.sav', 'rb'))
     prediction = model.predict(vector_inp)
 
     return prediction[0]
