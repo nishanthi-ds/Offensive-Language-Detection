@@ -13,3 +13,7 @@ This project aims to develop a machine learning model to detect offensive langua
 5- **Model Evaluation**: The model is evaluated using precision, recall, F1-score, and a confusion matrix to ensure its reliability in detecting offensive content.
 
 6- **Deployment**: A Streamlit application is created to allow users to enter tweet text and receive real-time feedback on whether the content is offensive. The app is run locally using:
+
+**Check out the live demo on Streamlit**:  
+[https://<your-streamlit-username>.streamlit.app](https://offensive-language-detection-jx4pzfhczgd8uxeogu8t2p.streamlit.app/)
+
